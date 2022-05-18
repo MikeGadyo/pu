@@ -48,10 +48,10 @@ function browsersync() {
       baseDir: './dist/',
       middleware: bssi({ baseDir: './dist/', ext: '.html' })
     },
-    ghostMode: { clicks: false },
+    ghostMode: false,
     notify: false,
     online: true,
-    // tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
+    tunnel: 'mikegadyo', // Attempt to use the URL https://yousutename.loca.lt
   })
 }
 
