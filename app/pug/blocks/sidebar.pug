@@ -1,0 +1,21 @@
+div.sidebar
+	div.sidebar-logo
+		a.sidebar-logo__link(href="/") 
+			img.sidebar-logo__img(src="/img/logo.svg", alt="")
+		p.sidebar-version v0.1
+	form.sidebar__search(action="")
+		input.sidebar__search-input(type="text" placeholder="Поиск...")
+		button.sidebar__search-button(type="submit")
+	a.sidebar-account(href="#") 
+		div.sidebar-account__info
+			img.sidebar-account__img(src="img/account.jpg", alt="Аккаунт")
+			div.sidebar-account__text
+				p.sidebar-account__name Константин К
+				p.sidebar-account__position должность
+		div.sidebar-account__segue
+	nav.sidebar-menu
+		ul.sidebar-menu__list
+			each item, index in menu
+				li.sidebar-menu__item(class=item.title==pageTitle?"sidebar-menu__item_active":"")
+					a.sidebar-menu__link(href=item.link,class=item.class)=item.title
+						span.sidebar-menu__notice 123

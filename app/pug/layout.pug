@@ -13,10 +13,8 @@ html(lang="ru")
 			//- include blocks/favicons
 	body
 		div.wrapper#wrapper
-			include blocks/header
+			include blocks/sidebar
 			main.content
 				block content
-					include blocks/crumbs
-			include blocks/footer
 		block scripts
 			script(src="scripts/main.min.js?v=" + versionFiles)
