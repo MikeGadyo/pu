@@ -5,6 +5,31 @@
 }
 
 @media screen and (max-width: 1023px) {
+	.wrapper{
+		flex-direction: column;
+	}
+	.sidebar{
+		background-color: $color-dark;
+		height: 90px;
+		max-width: 100%;
+		transition: all .3s;
+		&__burger{
+			display: block;
+		}
+		&-wrap{
+			transform: translateY(-200%);
+		}
+		&__is-open{
+			height: 100vh;
+			& .sidebar-wrap{
+				transform: translateY(0);
+			}
+		}
+	}
+	.content{
+		border-radius: 0;
+		margin: 0;
+	}
 	.container{
 		max-width: 800px;
 	}
