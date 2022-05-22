@@ -1,0 +1,43 @@
+include variables.pug
+
+doctype html
+html(lang="ru")
+	block variables
+	head 
+		block head
+			meta(charset="UTF-8")
+			title Войти в панель управления
+			meta(name='viewport', content='width=device-width, initial-scale=1')
+			//- meta(name='viewport', content='width=1320px, initial-scale=1')
+			link(href="css/main.min.css?v="+ versionFiles, rel="stylesheet")
+			//- include blocks/favicons
+	body
+		div.wrapper#wrapper
+			div.login
+				div.login__nav
+					button.login__sign-in.login__nav-item.login__nav-item_active(href="#") Авторизация
+					button.login__sign-up.login__nav-item(href="#") Регистрация
+				div.login__wrap
+					form.form__sign-in.form__active(action="")
+						div.login__field
+							input.login__input(type="text" placeholder="Email или логин")
+						div.login__field
+							input.login__input(type="password" placeholder="Пароль")
+							a.login__password-recovery(href="#") Забыли пароль?
+						button.login__btn Войти 
+					form.form__sign-up(action="")
+						div.login__field
+							input.login__input(type="text" placeholder="Имя*")
+						div.login__field
+							input.login__input(type="text" placeholder="Фамилия*")
+						div.login__field
+							input.login__input(type="text" placeholder="Дата рождения*")
+						div.login__field
+							input.login__input(type="tel" placeholder="Телефон*")
+						div.login__field
+							input.login__input(type="email" placeholder="Email")
+						div.login__field
+							input.login__input(type="password" placeholder="Пароль*")
+						button.login__btn Зареги стрироваться
+		block scripts
+			script(src="scripts/main.min.js?v=" + versionFiles)

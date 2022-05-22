@@ -68,13 +68,101 @@ textarea.error {
 	margin: 20px 20px 20px 0;
 	background-color: #fff;
 }
-.header{
+.login{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding-top: 100px;
+	&__nav{
+		display: flex;
+		&-item{
+			@include reset-button;
+			margin: 0 20px;
+			padding: 10px;
+			min-width: 115px;
+			border-radius: 10px;
+			text-align: center;
+			border: 1px solid solid transparent;
+			transition: border .3s;
+			&_active{
+				border: 1px solid solid $color-grey-dark;
+
+			}
+		}
+	}
+	&__wrap{
+		display: flex;
+		max-width: 380px;
+		width: 100%;
+		padding: 40px;
+		border-radius: 20px;
+		overflow: hidden;
+		// border: 1px solid $color-grey-dark;
+	}
+	&__field{
+		display: block;
+		
+		margin-bottom: 20px;
+	}
+	&__input{
+		@include reset-input;
+		height: 42px;
+		width: 100%;
+		border-radius: 10px;
+		padding: 0 15px;
+		background-color: #282C4D;
+		&::placeholder{
+			color: $color-grey-dark;
+		}
+	}
+	&__password-recovery{
+		display: block;
+		text-align: right;
+		margin-top: 10px;
+		color: $color-grey-dark;
+		&:hover{
+			transition: color .3s;
+			color: #3F60C5;
+		}
+	}
+	&__btn{
+		@include reset-button;
+		padding: 9px 15px;
+		text-align: center;
+		width: 100%;
+		background-color: #3F60C5;
+		border-radius: 10px;
+	}
+	&__sign-up{
+		display: block;
+	}
+	&__sign-in {
+		display: block;
+	}
+}
+.form__sign-in{
+	transition: all .3s;
+	transform: rotateY(90deg);
+	width: 0;
 	flex-shrink: 0;
 }
-.footer{
+.form__sign-up{
+	transition: all .3s;
+	transform: rotateY(90deg);
+	width: 0;
 	flex-shrink: 0;
+}
+.form__active{
+	transition: all .3s;
+	transform: rotateY(0deg);
+	width: 300px;
 }
 .sidebar{
+	position: sticky;
+	top: 0;
 	max-width: 300px;
 	width: 100%;
 	padding: 20px;
