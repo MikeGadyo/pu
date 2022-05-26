@@ -1,0 +1,22 @@
+extends layout.pug
+
+block variables
+	- var pageTitle = "Связаться с нами"
+block content
+	div.container
+		p.page-title #{pageTitle}
+		div.contacts
+			div.contacts__map
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7bdcbc8c2ec56c03ea0a19e2dcd8ea597797ffecc649ba35a32c78c2ebbc83d1&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+			div.contacts__info
+				div.contacts__title Адрес
+				p 454845, Оренбургская область, город Серебряные Пруды, шоссе Бухарестская, 50
+				div.contacts__title Телефон
+				p +7 (900) 000-00-00
+				div.contacts__title E-mail
+				p email@email.gg
+				div.contacts__title Социальные сети
+				p
+					a.contacts__icon.contacts__instagram(href="#") 
+					a.contacts__icon.contacts__twitter(href="#") 
+					a.contacts__icon.contacts__telegram(href="#") 

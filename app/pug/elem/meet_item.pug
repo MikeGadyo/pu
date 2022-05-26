@@ -1,0 +1,15 @@
+each item, index in meet_item
+	div.meet__item
+		div.meet__column.meet__column_flex
+			img.meet__client-avatar(src=item.img, alt="Фото профиля")
+			div.meet__info
+				span.meet__client-name=item.name
+				span.meet__client-car=item.car
+		div.meet__column
+			span.meet__data #{item.date} - #{item.time}
+			span.meet__name-service=item.service
+		div.meet__column
+			span.meet__status=item.status
+		div.meet__column
+			span.meet__price=item.price + " руб"
+		button.meet__more

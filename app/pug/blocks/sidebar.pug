@@ -21,4 +21,5 @@ div.sidebar
 				each item, index in menu
 					li.sidebar-menu__item(class=item.title==pageTitle?"sidebar-menu__item_active":"")
 						a.sidebar-menu__link(href=item.link,class=item.class)=item.title
-							span.sidebar-menu__notice 123
+							if item.notif==0
+								span.sidebar-menu__notice=item.notif

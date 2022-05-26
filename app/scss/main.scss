@@ -64,9 +64,9 @@ textarea.error {
 .content{
 	color: $color-dark;
 	flex-grow: 1;
-	border-radius: 30px;
+	border-radius: 15px;
 	margin: 20px 20px 20px 0;
-	background-color: #fff;
+	background-color: #e0e0e0;
 }
 .login{
 	width: 100%;
@@ -323,7 +323,7 @@ textarea.error {
 
 			&_bonus {
 				&::before {
-					mask-image: url(/img/icon_bonus.svg);
+					mask-image: url(/img/icon_location.svg);
 				}
 			}
 
@@ -349,6 +349,129 @@ textarea.error {
 			border-radius: 5px;
 			flex-shrink: 0
 		}
+	}
+}
+.page-title{
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.meet{
+	&__new{
+		@include reset-button;
+		padding: 10px 20px;
+		color: white;
+		background-color: #3F60C5;
+		border-radius: 10px;
+	}
+	&__actual{}
+	&__completed{}
+	&__title{}
+	&__item{
+		display: flex;
+		padding: 30px 40px;
+		margin-top: 20px;
+		background-color: white;
+		border-radius: 15px;
+		// box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+		align-items: center;
+		justify-content: space-between;
+		&_completed{
+			transition: opacity .3s;
+			opacity: 0.8;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+	&__column{
+		max-width: 230px;
+		width: 100%;
+		margin: auto;
+		&_flex{
+			display: flex
+		}
+	}
+	&__client-avatar{
+		width: 42px;
+		height: 42px;
+		border-radius: 21px;
+		overflow: hidden;
+		flex-shrink: 0;
+	}
+	&__info{
+		margin-left: 20px;
+	}
+	&__client-name{
+		display: block;
+	}
+	&__client-car{
+		display: block;
+		color: $color-grey-dark;
+	}
+	&__data{
+		display: block;
+	}
+	&__name-service{
+		display: block;
+		color: $color-grey-dark;
+	}
+	&__status{
+		padding: 10px;
+		border-radius: 5px;
+		color: white;
+		background-color: #3F60C5
+	}
+	&__price{}
+	&__more{
+		@include reset-button;
+		width: 42px;
+		height: 42px;
+		border-radius: 5px;
+		padding: 9px;
+		background-image: url("/img/icon_more.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		transition: all .3s;
+		&:hover{
+			background-color: $color-grey;
+		}
+	}
+	
+}
+.contacts{
+	display: flex;
+	justify-content: space-between;
+	&__title{
+		font-size: 20px;
+		font-weight: 600;
+	}
+	&__map{
+		width: 48%;
+	}
+	&__info{
+		width: 48%;
+	}
+	&__icon{
+		display: inline-block;
+		margin-right: 20px;
+		width: 24px;
+		height: 24px;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: 0.8;
+		transition: opacity .3s;
+		&:hover{
+			opacity: 1;
+		}
+	}
+	&__instagram{
+		background-image: url(/img/icon_instagram.svg)
+	}
+	&__twitter{
+		background-image: url(/img/icon_twitter.svg)
+	}
+	&__telegram{
+		background-image: url(/img/icon_telegram.svg)
 	}
 }
 /* ПОДКЛЮЧЕНИЕ СТИЛЕЙ АДАПТИВА */

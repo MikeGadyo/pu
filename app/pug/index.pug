@@ -3,6 +3,42 @@ extends layout.pug
 block variables
 	- var pageTitle = "Записи"
 block content
-	div.container
-		p #{pageTitle}
-		p Далеко-далеко за словесными, горами 
+	div.container.meet
+		p.page-title #{pageTitle}
+		button.meet__new Новая запись
+		div.meet__actual
+			p.meet__title Актуальные записи
+			each actual, index in meet_item
+				if actual.status!='Выполнено'
+					div.meet__item.meet__item_actual
+						div.meet__column.meet__column_flex
+							img.meet__client-avatar(src=actual.img, alt="Фото профиля")
+							div.meet__info
+								span.meet__client-name=actual.name
+								span.meet__client-car=actual.car
+						div.meet__column
+							span.meet__data #{actual.date} - #{actual.time}
+							span.meet__name-service=actual.service
+						div.meet__column
+							span.meet__status=actual.status
+						div.meet__column
+							span.meet__price=actual.price + " руб"
+						button.meet__more
+		div.meet__completed
+			p.meet__title Завершенные записи
+			each actual, index in meet_item
+				if actual.status=='Выполнено'
+					div.meet__item.meet__item_completed
+						div.meet__column.meet__column_flex
+							img.meet__client-avatar(src=actual.img, alt="Фото профиля")
+							div.meet__info
+								span.meet__client-name=actual.name
+								span.meet__client-car=actual.car
+						div.meet__column
+							span.meet__data #{actual.date} - #{actual.time}
+							span.meet__name-service=actual.service
+						div.meet__column
+							span.meet__status=actual.status
+						div.meet__column
+							span.meet__price=actual.price + " руб"
+						button.meet__more
