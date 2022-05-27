@@ -5,4 +5,9 @@ block variables
 block content
 	div.container
 		p.page-title #{pageTitle}
-		span лол кек
+		each item, index in services
+			div.service-item
+				h3.service-item__title=item.name
+				p.service-item__desc=item.desc
+				p.service-item__price=item.price+' руб'
+				

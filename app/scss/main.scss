@@ -474,6 +474,20 @@ textarea.error {
 		background-image: url(/img/icon_telegram.svg)
 	}
 }
+.service-item{
+	padding: 30px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	border-radius: 20px;
+	
+	&__title{
+		margin: 0;
+	}
+	&__desc{}
+	&__price{
+		margin: 0;
+	}
+}
 /* ПОДКЛЮЧЕНИЕ СТИЛЕЙ АДАПТИВА */
 @import "_response";
 /* НИЖЕ СТЕЛЕЙ НЕ ДОЛЖНО БЫТЬ!!! */
